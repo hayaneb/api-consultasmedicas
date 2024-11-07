@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "es6",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,         // Habilita o uso de decoradores
+    "emitDecoratorMetadata": true,          // Emite metadados sobre decoradores
+    "strict": true,                         // Habilita verificações rigorosas
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}

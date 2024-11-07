@@ -1,0 +1,30 @@
+service: teste-tecnico
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  getAgendas:
+    handler: dist/container.getAgendas
+    events:
+      - http:
+          path: agenda
+          method: get
+  
+  getAgendasById:
+    handler: dist/container.getAgendasById
+    events:
+      - http:
+          path: agenda-id
+          method: get
+
+  marcarAgendamento:
+    handler: dist/container.marcarAgendamento
+    events:
+      - http:
+          path: agendamento
+          method: post
+
+plugins:
+  - serverless-offline
